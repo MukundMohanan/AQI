@@ -28,7 +28,7 @@ if ('geolocation' in navigator) {
       document.getElementById('city6').textContent = city_json.city_loc.address.city;
       document.getElementById('city7').textContent = city_json.city_loc.address.city;
 
-      var OSM_URL  =  'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+      var OSM_URL  =  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
     var  osmLayer1  =  L.tileLayer(OSM_URL);  
     var  osmLayer2  =  L.tileLayer(OSM_URL);  
     var  osmLayer3  =  L.tileLayer(OSM_URL);  
