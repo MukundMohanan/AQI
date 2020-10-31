@@ -1,4 +1,4 @@
-# AQI
+# AQI - Desktop only
 Air Quality
 
 This project is based on Live data of the Air Quality Index and Weather at the user's present location
