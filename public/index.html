@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+      crossorigin=""
+    ></script>
+    <title>AQI Project</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">AQI System</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/features.html">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ourteam.html">Our Team</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <h1 style="text-align: center;">AQI Project</h1>
+    <div class="menu">
+      <a href="/">Check in</a> | <a href="/checkins">View Checkins</a> | <a href="/try.html">AQI on MAP</a>
+    </div>
+    <h2>Weather in <strong><span id="city"></span>, <span id="location"></span> <span id="country"></span></strong></h2>
+    <p class="text-warning"><span id="warning"></span></p>
+
+<div class="container">
+  <div class="tab">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Parameters</th>
+          <th scope="col">Data</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-info">
+          <th scope="row">Local Time</th>
+          <td><span id="time"></span></td>
+        </tr>
+        <tr class="table-info">
+          <th scope="row">Wind Speed</th>
+          <td><span id="wind"></span> m/s</td>
+        </tr>
+        <tr class="table-info">
+          <th scope="row">Temp_Max</th>
+          <td><span id="temp_max"></span> &deg; C</td>
+        </tr>
+        <tr class="table-info">
+          <th scope="row">Temp_Min</th>
+          <td><span id="temp_min"></span> &deg; C</td>
+        </tr>
+        <tr class="table-info">
+          <th scope="row">Pressure</th>
+          <td><span id="pressure"></span> <a href="https://www.google.com/search?hl=en&ei=EKjXXtzsLN-J4-EP59GK8A4&q=hpa+pressure+meaning&oq=hpa+pressure+meaning&gs_lcp=CgZwc3ktYWIQAzICCAAyBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB46BAgAEEc6BAgAEENQ2w9YyxpgzBtoAHABeACAAYwBiAG9BpIBAzMuNZgBAKABAaoBB2d3cy13aXo&sclient=psy-ab&ved=0ahUKEwjctOXB4uXpAhXfxDgGHeeoAu4Q4dUDCAw&uact=5">hPa</a></td>
+        </tr>
+        <tr class="table-info">
+          <th scope="row">Humidity</th>
+          <td><span id="humidity"></span>	&#37;</td>
+        </tr>
+        <tr class="table-info">
+          <th scope="row">O<sub>3</sub></th>
+          <td><span id="o3"></span> µg/m³</td>
+        </tr>
+        <tr class="table-info">
+          <th scope="row">NO<sub>2</sub></th>
+          <td><span id="no2"></span> µg/m³</td>
+        </tr>
+        <tr class="table-info">
+          <th scope="row">CO</th>
+          <td><span id="co"></span> µg/m³</td>
+        </tr>
+        <tr class="table-info">
+          <th scope="row">SO<sub>2</sub></th>
+          <td><span id="so2"></span> µg/m³</td>
+        </tr>
+        <tr class="table-info">
+          <th scope="row">PM<sub>2.5</sub></th>
+          <td><span id="pm25"></span> µg/m³</td>
+        </tr>
+        <tr class="table-info">
+          <th scope="row">PM<sub>10</sub></th>
+          <td><span id="pm10"></span> µg/m³</td>
+        </tr>
+      </tbody>
+    </table> 
+  </div>
+  <div class="sen">
+      
+        <img src="temp-icon.png" alt="Temperature" width="20px" height="15px">&nbsp;<strong> <span id="temp"></span>&deg; C
+          <br>
+          <strong>Cloudiness : <span id="summary"></span></strong>
+          <br>
+          Last updated on : <span id="lastupdate"></span>
+          <br><br>
+
+          The location you are is <strong>latitude <span id="latitude"></span></strong>&deg;, <strong>longitude 
+            <span id="longitude"></span>&deg;</strong><br> The concentration of
+            particulate matter (<strong><span id="aq_parameter"></span></strong>) is
+            <strong><span id="aq_value"></span> <span id="aq_units"></span>.<br> Last updated on</strong>
+            <span id="aq_date"></span>.
+      
+  </div>
+</div>
+
+
+    <script src="sketch.js"></script>
+  </body>
+</html>

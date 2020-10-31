@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link  rel="stylesheet"  href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css"  />  
+    <script  src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>  
+    <style>
+        .con{
+            margin-left: 100px;
+        }
+        
+        h2.title{
+           margin-bottom: 30px;
+           text-align: center;
+           font-size: 35px;
+       }
+       h2{
+           margin-bottom: 25px;
+           text-align: center;
+           font-size: 30px;
+       }
+        .column {
+            float: left;
+            width: 29.7%;
+            padding: 25px;
+        }
+        .column_special {
+            float: left;
+            width: 97%;
+            padding: 20px;
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .menu{
+            text-align: center;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">AQI System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/features.html">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ourteam.html">Our Team</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    <h2 class="title"><span id="city"></span> AQI on MAP</h2>
+    <div class="menu">
+        <a href="/">Check in</a> | <a href="/checkins">View checkins</a> | <a href="/try.html">AQI on MAP</a>
+      </div>
+      <div class="con">
+    <div class="row">
+        <div class="column">
+            <div class="container"><h2><span id="city1"></span> | Average AQI</h2>
+                <div  id='map_usepa_aqi'  style='height:380px;'></div> 
+            </div>
+        </div>
+        <div class="column">
+            <div class="container"><h2> <span id="city2"></span> | PM<sub>25</sub></h2>
+                <div  id='map_usepa_pm25'  style='height:380px; '></div> 
+            </div>
+        </div>
+        <div class="column">
+            <div class="container"><h2><span id="city3"></span> | PM<sub>10</sub></h2>
+                <div  id='map_usepa_pm10'  style='height:380px; '></div> 
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+            <div class="container"><h2><span id="city4"></span> | O<sub>3</sub></h2>
+                <div  id='map_usepa_o3'  style='height:380px; '></div> 
+            </div>
+        </div>
+        <div class="column">
+            <div class="container"><h2><span id="city5"></span> | NO<sub>2</sub></h2>
+                <div  id='map_usepa_no2'  style='height:380px; '></div> 
+            </div>
+        </div>
+        <div class="column">
+            <div class="container"><h2><span id="city6"></span> | SO<sub>2</sub></h2>
+                <div  id='map_usepa_so2'  style='height:380px; '></div> 
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column_special">
+            <div class="container"><h2><span id="city7"></span> | CO</h2>
+                <div  id='map_usepa_co'  style='height:380px; width: 380px; width: 100%;'></div> 
+            </div>
+        </div>
+      </div>
+    </div>
+    
+    
+ 
+ <script src="map.js"></script> 
+</body>
+</html>

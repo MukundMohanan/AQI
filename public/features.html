@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+    <title>AQI | Features</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">AQI System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/features.html">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/ourteam.html">Our Team</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+    </nav>
+      <h1 style="text-align: center;">AQI Project Features</h1>
+    <div class="menu">
+      <a href="/">Check in</a> | <a href="/checkins">View Checkins</a> | <a href="/try.html">AQI on MAP</a>
+    </div>
+
+    
+    <div class="jumbotron">
+        <h1 class="display-3">Live Location updates</h1>
+        <p>Accessing GeoLocation with navigator.geolocation.</p>
+        <p>The Geolocation API is accessed via a call to navigator.geolocation; this will cause the user's browser to ask them for permission to access their location data. If they accept, then the browser will use the best available functionality on the device to access this information (for example, GPS).</p>
+        <p><strong>This will featch the Latitude and Longitude of the user which will be used to get AQI Report at their Lat and Long!</strong></p>
+    </div>
+    <div class="jumbotron">
+        <h1 class="display-3">Ne Database</h1>
+        <p></p>
+        <p>NeDB is a lightweight database written entirely in Javascript, and that implements the well-known MongoDB API.</p>
+        <p>We can think of it as SQLite for MongoDB projects</p>
+        <p><strong>The data that is fetched for each user is stored in a database and summary of each entry is stored in another database for future project based on Python Visualization</strong></p>
+    </div>
+    <div class="jumbotron">
+        <h1 class="display-3">API</h1>
+        <p></p>
+        <p>An application program interface (API) is a set of routines, protocols, and tools for building software applications. Basically, an API specifies how software components should interact.</p>
+        <p>List of API we have used to featch data.</p>
+        <div class="list-group">
+            <a href="https://openweathermap.org/" class="list-group-item list-group-item-action">Openweathermap.org
+            </a>
+            <a href="https://openaq.org/" class="list-group-item list-group-item-action">Openaq.org
+            </a>
+            <a href="https://www.visualcrossing.com/" class="list-group-item list-group-item-action">Visualcrossing.com
+            </a>
+            <a href="https://locationiq.com/" class="list-group-item list-group-item-action">Locationiq.com
+            </a>
+          </div>
+        <p><strong>Openweathermap API</strong> : It is used to featch the location weather like temprature, humidity, couldiness.</p>
+        <p><strong>Openaq API</strong> : It is used to featch the location parameters like NO<sub>2</sub>, SO<sub>2</sub>, CO, PM<sub>2.5</sub>, PM<sub>10</sub> etc.</p>
+        <p><strong>Visualcrossing API</strong> : It is used to featch the location weather summary.</p>
+        <p><strong>Locationiq API</strong> : It is used to featch the location of sensors and city/area name.</p>
+    </div>
+</body>
+</html>

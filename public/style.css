@@ -1,0 +1,31 @@
+body{
+  background-color: #f7f7f7;
+}
+
+table{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th,td{
+  padding: 5px;
+  text-align: center;
+}
+
+#checkinMap {
+  height: 500px;
+  margin: 8px 0px;
+}
+
+.tab{
+  float: left;
+  width: 500px;
+}
+.sen{
+  width: 500px;
+  float: right;
+}
+.menu{
+  text-align: center;
+  font-size: 25px;
+}
